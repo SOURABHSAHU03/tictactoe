@@ -1,0 +1,133 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  /* Main container */
+  .container {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom right, #0A0A0A, #121212, #1A1A1A);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Grid background */
+  .background-grid {
+    position: absolute;
+    inset: 0;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==');
+    opacity: 0.2;
+  }
+  
+  /* Game content */
+  .game-content {
+    position: relative;
+    z-index: 10;
+    max-width: 32rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  
+  .status {
+    color: #a1a1aa;
+  }
+  
+  /* Game board */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    aspect-ratio: 1;
+    margin-bottom: 2rem;
+  }
+  
+  .square {
+    aspect-ratio: 1;
+  }
+  
+  .square button {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .square button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(0.98);
+  }
+  
+  .square button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Player symbols */
+  .x-symbol {
+    color: #ec4899;
+    size: 500px;
+    font-size: 5rem;
+    transform: scale(0.95);
+  }
+  
+  .o-symbol {
+    color: #3b82f6;
+    font-size: 5rem;
+  }
+  
+  /* Reset button */
+  .reset-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.75rem;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .reset-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(0.98);
+  }
+  
+  .reset-button:active {
+    transform: scale(0.95);
+  }
